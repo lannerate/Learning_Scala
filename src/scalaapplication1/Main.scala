@@ -10,7 +10,6 @@ package scalaapplication1
 import scalaapplication1.ch20._
 
 object Main {
-
   /**
    * @param args the command line arguments
    */

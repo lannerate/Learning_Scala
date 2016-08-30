@@ -1,6 +1,6 @@
 package scalaapplication1.ch04
 
-object ScratchPad {
+object ScratchPad extends App{
 
   def scratch() {
     val acc = new ChecksumAccumulator
