@@ -7,6 +7,7 @@ package scalaapplication1
 //import scalaapplication1.ch07._
 //import scalaapplication1.ch08._
 
+import scala.annotation.tailrec
 import scalaapplication1.ch20._
 
 object Main {
@@ -35,9 +36,9 @@ object Main {
     pickyEchoActor ! "You're going to ignore this, aren't you?"
     
     pickyEchoActor ! 12   // but you won't ignore this
-    
-   
-    
+
+
+
     /*
      * Chapter 8
     
@@ -73,4 +74,11 @@ object Main {
       greetStrings.foreach(print)
       */
   }
+
+  def fac(n:Int):Int = {
+    if(n<=0) 1
+    else n * fac( n-1)
+  };
+
+  fac(5)
 }
