@@ -35,3 +35,26 @@ buffer.foreach(println)
 //[T <: A with B]
 //lower bounds
 //[T >: A with B]
+
+// mulit-view bounds
+class A
+class B
+
+implicit def string2A(s:String) = new A
+
+implicit def string2B(s:String) = new B
+
+def foo[T <% A <% B](x:T) = println(x)
+
+foo("test")
+
+//mulit-context bounds
+class C[T]
+class D[T]
+
+implicit val c = new C[Int]
+implicit val d = new D[Int]
+
+def bar[T : C : D](i:T) = println(i)
+
+bar(88)
